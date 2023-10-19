@@ -4,7 +4,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stddef.h>
 
+/* Struct for a singly-linked list node */
+typedef struct list_s {
+    char *str;
+    struct list_s *next;
+} list_t;
+
+/* Function prototype for adding a node at the end of the list */
+list_t *add_node_end(list_t **head, const char *str);
 
 /**
  * struct list_s - Singly linked list
